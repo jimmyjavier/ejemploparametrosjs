@@ -81,6 +81,12 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-   
+   <script> 
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const clave = urlParams.get("clave");
+      const elementoMensaje = document.querySelector("#mensaje");
+      elementoMensaje.value = "Solicitas información del producto con clave: " + clave;
+  </script>
   </body>
 </html>
